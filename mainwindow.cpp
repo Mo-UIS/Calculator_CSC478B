@@ -19,10 +19,6 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this); // calls setup Ui function of the ui object using this as an argument.
     on_Reset_released(); // reset calculator to be blank
     LoadUiButtons(); //Add all UI push buttons to a vector
-    Task t1 ;
-    t1.Data = {1,2,3,6,4};
-    t1.Op = MathOp::Mean;
-    qDebug()<<"Meeeeeeeeeeeeeeeeean = " <<MathEnginePtr->Run(t1);
 }
 
 MainWindow::~MainWindow()

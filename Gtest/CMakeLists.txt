@@ -17,9 +17,11 @@ set(PROJECT_SOURCES
         main.cpp
         ${CMAKE_SOURCE_DIR}/mathengine.cpp
         ${CMAKE_SOURCE_DIR}/mathengine.h
+        ${CMAKE_SOURCE_DIR}/unitsconversion.cpp
+        ${CMAKE_SOURCE_DIR}/unitsconversion.h
         MathEngineTest.cpp
+        UnitConversionTest.cpp
 )
-
 
 add_executable(CalculatorTest ${PROJECT_SOURCES})
 

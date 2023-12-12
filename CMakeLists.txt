@@ -78,5 +78,5 @@ qt_generate_deploy_app_script(
     NO_UNSUPPORTED_PLATFORM_ERROR
 )
 install(SCRIPT ${deploy_script})
-#add_subdirectory(Gtest)
-#enable_testing()
+add_subdirectory(Gtest)
+enable_testing()
