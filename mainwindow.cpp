@@ -355,7 +355,7 @@ void MainWindow::on_CbRtButton_released()
 /*
 
 Common log base10 of a number / 10^X
-(Requirement 3.2.1)
+(Requirement 3.2.1 & Requirement 3.3.4 )
 
 */
 // log base 10 function
@@ -380,7 +380,7 @@ void MainWindow::on_LogButton_released()
 /*
 
 Natural log or ln of a number
-(Requirement 3.2.2)
+(Requirement 3.2.2 & 3.2.3)
 
 */
 // ln natural logarthim function
@@ -637,9 +637,9 @@ void MainWindow::on_DegreeToRad_released()
 
 /*
 
-Produces reciprocal of a number & Factorial fucntion
+Produces factorial and reciprocal of a number
 
-(Requirement 3.8.0  -  3.7.0)
+(Requirement 3.7.0  -  3.8.0)
 */
 
 // negative exponent (recirpocal of x) and factorial function
@@ -693,7 +693,7 @@ void MainWindow::on_RoundButton_released()
 
 Finds mean in an array
 
-(Requirement 3.5.2)
+(Requirement 3.5.1)
 */
 
 void MainWindow::on_Mean_released()
@@ -708,7 +708,7 @@ void MainWindow::on_Mean_released()
 
 Finds median in an array
 
-(Requirement 3.5.3)
+(Requirement 3.5.2)
 */
 
 void MainWindow::on_Median_released()
@@ -733,7 +733,11 @@ void MainWindow::on_EqualButton_released()
     EnableDisableKeyPad(true);
     DeactivateSecondFuncButton();
 }
+/*
 
+Allows user to return result to UI
+(Requirement 2.4.0)
+*/
 void MainWindow::on_EnterButton_released()
 {
     ui->LCD2->setText(ui->LCD2->text() + " ");

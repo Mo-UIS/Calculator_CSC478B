@@ -15,8 +15,9 @@ MathEngine::~MathEngine()
 
 /*
 
-Math Engine to identify and store current operation
-(Requirement 3.6.0)
+Math Engine to control flow of data for specfic operations
+(Requirement 3.6.1 )
+
 */
 
 double MathEngine::Run(Task& task)
@@ -272,8 +273,10 @@ double MathEngine::Cubed(Task& task)
 }
 
 /*
+
+Factorial function
 (Requirement 3.7.0)
-factorial function
+
 */
  double MathEngine::Fact(Task& task)
 {
@@ -335,18 +338,18 @@ double MathEngine::Exp(Task& task)
 
 /*
 Finds mean in an array
-(Requirement 3.5.2)
+(Requirement 3.5.1)
 */
 double MathEngine::Mean(Task& task)
 {
     return std::accumulate(task.Data.begin(),task.Data.end(),0.0)  /  static_cast<double>(task.Data.size());
 }
 
-/*∞
+/*
 
 Finds median in an array
 
-(Requirement 3.5.3)
+(Requirement 3.5.2)
 */
 double MathEngine::Median(Task& task)
 {
@@ -366,18 +369,35 @@ double MathEngine::Median(Task& task)
     }
 }
 
+/*
+
+Finds 10^x
+
+(Requirement 3.3.4)
+*/
 double MathEngine::TenTo(Task& task)
 {
     auto exp = task.Data.at(1);
     return pow(10,exp);
 }
+/*
+
+Finds e^X
+
+(Requirement 3.2.3)
+*/
 
 double MathEngine::EtoExp(Task& task)
 {
     auto exp = task.Data.at(1);
     return pow(e,exp);
 }
+/*
 
+Finds  reciprocal 1/X
+
+(Requirement 3.8.0)
+*/
 double MathEngine::Rec(Task& task)
 {
     auto num = task.Data.at(1);
